@@ -1,0 +1,4 @@
+*.yaml
+*.ckpt
+*.pyc
+*.csv

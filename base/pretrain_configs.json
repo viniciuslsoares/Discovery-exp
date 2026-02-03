@@ -1,0 +1,11 @@
+{
+    "a700":     {"in": 256, "batch_size": 128, "num_epochs": 125000, "lr": "1e-05"},
+    "namss":    {"in": 256, "batch_size": 128, "num_epochs": 125000, "lr": "1e-05"},
+    "f3":       {"in": 256, "batch_size": 32,  "num_epochs": 1200,   "lr": "1e-05"},
+    "f3_N":     {"in": 32, "batch_size": 8,  "num_epochs": 5,   "lr": "1e-05"},
+    "seam_ai":  {"in": 256, "batch_size": 32,  "num_epochs": 1200,   "lr": "1e-05"},
+    "seam_ai_N":    {"in": 32, "batch_size": 8,  "num_epochs": 5,   "lr": "1e-05"},
+    "both":     {"in": 256, "batch_size": 32,  "num_epochs": 1200,   "lr": "1e-05"},
+    "both_N":   {"in": 256, "batch_size": 32,  "num_epochs": 1200,   "lr": "1e-05"},
+    "default":  {"in": 256, "batch_size": 32, "num_epochs": 1200, "lr": "1e-05"}
+}
