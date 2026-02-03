@@ -1,6 +1,7 @@
 import argparse
-from evaluate import main  # seu main de avaliação
-from functions import *
+from evaluate import main 
+from data import get_dataset_mapping
+from auxiliar import logger, parse_cap, parse_freeze_list
 
 if __name__ == "__main__":
     parser = argparse.ArgumentParser(

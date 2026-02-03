@@ -1,12 +1,7 @@
-import os
-import torch
-import random
-import numpy as np
+import os, torch, random, numpy as np
 from pathlib import Path
 from typing import Optional, Union, Literal
 from torch.utils.data import Dataset, ConcatDataset, DataLoader
-import lightning as L
-
 from minerva.data.data_modules.base import MinervaDataModule
 from minerva.data.datasets.binary_tree_subset import BinaryTreeSubset
 from minerva.data.datasets.base import SimpleDataset
@@ -15,13 +10,8 @@ from auxiliar import logger
 
 
 def apply_squeeze(label):
-    """Remove dimensões unitárias (ex: [1, H, W] -> [H, W])"""
-    if torch.is_tensor(label):
-        return label.squeeze()
-    elif isinstance(label, np.ndarray):
-        return np.squeeze(label)
-    return label
-
+    if torch.is_tensor(label): return label.squeeze()
+    return np.squeeze(label) if isinstance(label, np.ndarray) else label
 
 class SeismicReducibleDataset(Dataset):
     def __init__(self, root: Path, size: int, transform = None):

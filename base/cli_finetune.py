@@ -1,8 +1,7 @@
 import argparse
-from train import main
-from functions import *
-from auxiliar import *
-from data import *
+from train import main 
+from data import get_dataset_mapping
+from auxiliar import logger, parse_cap, parse_freeze_list
 
 if __name__ == "__main__":
     parser = argparse.ArgumentParser(

@@ -1,23 +1,9 @@
-from minerva.models.ssl.byol import BYOL
-from minerva.models.nets.image.deeplabv3 import DeepLabV3Backbone
-from minerva.models.loaders import FromPretrained
-from torchvision.models.resnet import resnet50
-from minerva.models.nets.image.deeplabv3 import DeepLabV3
-
-from torchvision.models.segmentation import DeepLabV3_ResNet50_Weights
-import torchvision.models
 import torch
 import torch.nn as nn
-
-from pathlib import Path
-import re
-
-import torch
-import torch.nn as nn
-from auxiliar import *
-from data import *
 from torchvision.models.segmentation import deeplabv3_resnet50
-from torchvision.models.segmentation import DeepLabV3_ResNet50_Weights
+from minerva.models.nets.image.deeplabv3 import DeepLabV3, DeepLabV3Backbone
+from minerva.models.ssl.byol import BYOL
+from auxiliar import logger
 
 
 class LinearSegmentationHead(nn.Module):
